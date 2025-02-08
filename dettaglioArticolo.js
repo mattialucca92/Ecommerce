@@ -19,7 +19,7 @@ $(document).ready(function () {
   });
 });
 
-//prova commit ale
+//prova commit Mattia
 function loadDetails() {
   let urlParams = new URLSearchParams(window.location.search);
   let articoloId = urlParams.get("id");
