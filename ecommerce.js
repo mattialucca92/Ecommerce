@@ -48,19 +48,6 @@ $(document).ready(function () {
         "Servizio non disponibile, riprova piu tardi";
     },
   });
-  $.ajax({
-    url: "https://run.mocky.io/v3/77342455-97f0-4153-a4bd-0cf7bd59e30e",
-    method: "GET",
-    dataType: "json",
-    success: function (data) {
-      console.log("Dati ricevuti:", data);
-
-      // Esempio: stampare i nomi dei prodotti in una lista
-    },
-    error: function (xhr, status, error) {
-      console.error("Errore nella richiesta:", error);
-    },
-  });
 });
 
 function generateCard(data) {
