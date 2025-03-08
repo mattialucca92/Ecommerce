@@ -8,11 +8,22 @@ $(document).ready(function () {
       url: `http://localhost:8080/api/articoli/categoria/${categoria}`, // Endpoint Spring Boot
       method: "GET",
       success: function (data) {
-        // let urlParams = new URLSearchParams(window.location.search);
-        // let id = urlParams.get("id");
-        // $("#" + id).hide();
-        // console.log("nascondoId" + id);
-        generateArticoliSimili(data);
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        $("#" + id).hide();
+
+        $("#btn-articoli-simili").hide(); // BOTTONE CHE SI NASCONDE QUANDO TROVA/NON TROVA ARTICOLI SIMILI
+
+        //SE LA LUNGHEZZA DELL'OGGETTO è 1, VUOL DIRE CHE NON CI SONO ARTICOLI SIMILI
+        if (data.length == 1) {
+          $("#modale").modal("show"); // VISUALIZZAZIONE MODALE
+          $("#dettaglio-articolo-simili").text("Non ci sono articoli simili");
+        } else {
+          generateArticoliSimili(data);
+        }
+        $("#dettaglio-articolo-simili").prepend(
+          "<a href='./ecommerce.html'>Torna alla home</a><br>"
+        );
       },
       error: function (error) {
         console.error("Errore durante la richiesta:", error);
@@ -50,7 +61,8 @@ function generateDetails(data) {
 
   $("#dettaglio-articolo").append(
     `
-    <div id="${data.id}" class="card" style="width: 18rem;">
+    <div class="row" >
+    <div id="${data.id}" class="card col-3" style="width: 18rem;">
             <img src="${data.immagineUrl}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">${data.nome}</h5>
@@ -58,6 +70,7 @@ function generateDetails(data) {
             <p class="card-text">${data.descrizione}</p>
             <p class="card-text">${data.prezzo}</p>
         </div>
+    </div>
     </div>
             `
   );

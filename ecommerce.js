@@ -55,16 +55,16 @@ function generateCard(data) {
     // document.getElementById("lista-articoli") vedi riga 39!!
     $("#lista-articoli").append(
       `
-    <div class="card" style="width: 18rem;">
-            <img src="${art.immagineUrl}" class="card-img-top" alt="...">
-        <div class="card-body">
+        <div class="card col-3 mx-3 my-3" style="width: 18rem;">
+            <img src="${art.immagineUrl}" class="card-img-top img-custom" alt="..." >
+          <div class="card-body">
             <h5 class="card-title">${art.nome}</h5>
             <p class="card-text">${art.categoria}</p>
             <p class="card-text">${art.descrizione}</p>
             <p class="card-text">${art.prezzo}</p>
             <a href="./dettaglioArticolo.html?id=${art.id}&cat=${art.categoria}" class="btn btn-primary">Vedi dettaglio</a>        
+          </div>
         </div>
-    </div>
             `
     );
   });
