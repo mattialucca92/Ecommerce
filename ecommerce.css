@@ -1,4 +1,310 @@
-.img-custom {
-  height: 300px;
+/* Stile per le card nella lista articoli */
+#lista-articoli .card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 20px;
+  border: none;
+  background-color: white;
 }
 
+#lista-articoli .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+#lista-articoli .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#lista-articoli .card-body {
+  padding: 20px;
+}
+
+#lista-articoli .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+#lista-articoli .card-text {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Stile speciale per il prezzo */
+#lista-articoli .card-text:last-of-type {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5b6ac4;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Stile per il pulsante dettaglio */
+#lista-articoli .btn-dettaglio {
+  background-color: #5b6ac4;
+  border-color: #5b6ac4;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+#lista-articoli .btn-dettaglio:hover {
+  background-color: #4a57a3;
+  border-color: #4a57a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Stile per le card nella lista articoli */
+#dettaglio-articolo-simili .card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 20px;
+  border: none;
+  background-color: white;
+}
+
+#dettaglio-articolo-simili .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+#dettaglio-articolo-simili .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#dettaglio-articolo-simili .card-body {
+  padding: 20px;
+}
+
+#dettaglio-articolo-simili .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+#dettaglio-articolo-simili .card-text {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Stile speciale per il prezzo */
+#dettaglio-articolo-simili .card-text:last-of-type {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5b6ac4;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Stile per il pulsante dettaglio */
+#dettaglio-articolo-simili .btn-dettaglio {
+  background-color: #5b6ac4;
+  border-color: #5b6ac4;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+#dettaglio-articolo-simili .btn-dettaglio:hover {
+  background-color: #4a57a3;
+  border-color: #4a57a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mantenere la classe img-custom esistente, ma sovrascrivere solo l'altezza */
+.img-custom {
+  height: 220px !important;
+  object-fit: cover !important;
+}
+
+#btn-articoli-simili {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  margin-left: 20px;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#btn-articoli-simili:hover {
+  background: linear-gradient(135deg, #5a7be7, #9266cc);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Stile per la card del dettaglio articolo */
+#dettaglio-articolo .card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 20px;
+  border: none;
+  background-color: white;
+}
+
+#dettaglio-articolo .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+#dettaglio-articolo .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#dettaglio-articolo .card-body {
+  padding: 20px;
+}
+
+#dettaglio-articolo .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+#dettaglio-articolo .card-text {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Stile speciale per il prezzo */
+#dettaglio-articolo .card-text:last-of-type {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5b6ac4;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Stile per il pulsante dettaglio */
+#dettaglio-articolo .btn-dettaglio {
+  background-color: #5b6ac4;
+  border-color: #5b6ac4;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+#dettaglio-articolo .btn-dettaglio:hover {
+  background-color: #4a57a3;
+  border-color: #4a57a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/*  */
+
+
+
+.row {
+  border: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.col-12 {
+  border: none !important;
+}
+
+.home-link {
+  color: #5b6ac4; /* Blu-viola più elegante */
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 2px solid #5b6ac4;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin: 15px 0;
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.home-link:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.home-link:hover::after {
+  transform: scaleX(1);
+}
+
+.home-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5b6ac4;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+#dettaglio-articolo-simili,
+.row,
+.col-12,
+.home-container {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Stile per il contenitore del link */
+.home-container {
+  margin: 15px 0;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+}

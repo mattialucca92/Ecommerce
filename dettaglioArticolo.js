@@ -22,7 +22,7 @@ $(document).ready(function () {
           generateArticoliSimili(data);
         }
         $("#dettaglio-articolo-simili").prepend(
-          "<a href='./ecommerce.html'>Torna alla home</a><br>"
+          "<div class='col-12' style='border: none;'><a href='./ecommerce.html' class='home-link'>Torna alla home</a></div>"
         );
       },
       error: function (error) {
@@ -68,7 +68,7 @@ function generateDetails(data) {
             <h5 class="card-title">${data.nome}</h5>
             <p class="card-text">${data.categoria}</p>
             <p class="card-text">${data.descrizione}</p>
-            <p class="card-text">${data.prezzo}</p>
+            <p class="card-text">${data.prezzo}€</p>
         </div>
     </div>
     </div>
@@ -83,17 +83,20 @@ function generateArticoliSimili(data) {
   data.forEach(function (art) {
     if (art.id !== id) {
       $("#dettaglio-articolo-simili").append(`
-        <div class="card" style="width: 18rem;">
-              <img src="${art.immagineUrl}" class="card-img-top" alt="...">
-          <div class="card-body">
-              <h5 class="card-title">${art.nome}</h5>
-              <p class="card-text">${art.categoria}</p>
-              <p class="card-text">${art.descrizione}</p>
-              <p class="card-text">${art.prezzo}</p>
-              <a href="./dettaglioArticolo.html?id=${art.id}&cat=${art.categoria}" class="btn btn-primary">Vedi dettaglio</a>        
-          </div>
-      </div>
-        `);
+          <div class="card" style="width: 18rem;">
+                <img src="${art.immagineUrl}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${art.nome}</h5>
+                <p class="card-text">${art.categoria}</p>
+                <p class="card-text">${art.descrizione}</p>
+                <p class="card-text">${art.prezzo}€</p>
+                <a href="./dettaglioArticolo.html?id=${art.id}&cat=${art.categoria}" 
+                  class="btn btn-primary btn-dettaglio">
+                   Vedi Dettaglio
+                </a>
+            </div>
+        </div>
+          `);
     }
   });
 }
