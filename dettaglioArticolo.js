@@ -45,7 +45,7 @@ function loadDetails() {
     url: `http://localhost:8080/api/articoli/details/${articoloId}`, // Endpoint Spring Boot
     method: "GET",
     success: function (data) {
-      console.log(data);
+      // console.log(data);
       generateDetails(data);
     },
     error: function (error) {
@@ -92,7 +92,7 @@ function generateArticoliSimili(data) {
                 <p class="card-text">${art.prezzo}€</p>
                 <a href="./dettaglioArticolo.html?id=${art.id}&cat=${art.categoria}" 
                   class="btn btn-primary btn-dettaglio">
-                   Vedi Dettaglio
+                  Vedi Dettaglio
                 </a>
             </div>
         </div>
