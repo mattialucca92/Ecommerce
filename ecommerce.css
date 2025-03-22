@@ -308,3 +308,80 @@
   text-align: left;
   background: transparent;
 }
+
+/* Stile per l'offcanvas */
+.offcanvas {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Stile per il titolo "Naviga per categorie" */
+.offcanvas-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  margin-bottom: 25px; /* Aumenta lo spazio sotto il titolo */
+}
+
+/* Stile per l'header dell'offcanvas */
+.offcanvas-header {
+  display: flex;
+  flex-direction: column; /* Disposizione verticale */
+  align-items: flex-start; /* Allinea il contenuto a sinistra */
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative; /* Per posizionare il pulsante di chiusura */
+}
+
+/* Stile per i bottoni delle categorie */
+.offcanvas-header .col-12 {
+  display: flex;
+  flex-direction: column; /* Disposizione verticale */
+  gap: 10px; /* Spazio tra i bottoni */
+  width: 100%; /* Occupa tutta la larghezza disponibile */
+}
+
+.btn-categorie {
+  width: 100%; /* Occupa tutta la larghezza disponibile */
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #5b6ac4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-categorie:hover {
+  background-color: #4a57a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Stile per il pulsante di chiusura */
+.btn-close {
+  font-size: 18px;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  position: absolute; /* Posiziona il pulsante di chiusura in alto a destra */
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  transform: scale(1.1);
+}
+
+/* Stile per il corpo dell'offcanvas */
+.offcanvas-body {
+  padding: 20px;
+}
